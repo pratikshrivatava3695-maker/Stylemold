@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import type { SlideData } from '../types';
 
 interface SlideProps {
@@ -74,7 +74,7 @@ const Slide: React.FC<SlideProps> = ({ data, totalSlides }) => {
 
         <div className="flex-grow flex flex-col md:flex-row gap-8 md:gap-12 animate-slide-in-up">
             <div className="w-full md:w-3/5 space-y-4">
-                {data.keyContent.map((point, index) => (
+                {data.keyContent?.map((point: ReactNode, index: number) => (
                     <div key={index} className="flex items-start space-x-3">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-brand-accent flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -87,7 +87,7 @@ const Slide: React.FC<SlideProps> = ({ data, totalSlides }) => {
             <VisualElement visual={data.visual} />
         </div>
         
-        {data.metrics.length > 0 && (
+        { (data.metrics?.length ?? 0) > 0 && (
             <div className="flex-shrink-0 mt-auto pt-6">
                 <div className="bg-brand-accent/5 border-l-4 border-brand-accent text-brand-light p-4 rounded-r-lg">
                     <p className="font-bold text-base md:text-lg">{data.metrics[0]}</p>

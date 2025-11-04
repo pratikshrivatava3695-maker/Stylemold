@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import type { SlideData } from './types';
-import Slide from './components/Slide';
-import Logo from './components/Logo';
+import Slide from './Components/Slide';
+import Logo from './Components/Logo';
 
 const slides: SlideData[] = [
   {
