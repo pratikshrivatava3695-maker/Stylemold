@@ -1,0 +1,5 @@
+{
+  "name": "Interactive Pitch Deck Generator",
+  "description": "A web application that generates a dynamic and visually appealing 5-slide pitch deck based on the provided 'Low-Return Rate Guarantee' strategy for StyleMold. It also includes strategic B2B email copy with easy-to-use copy-to-clipboard functionality.",
+  "requestFramePermissions": []
+}
